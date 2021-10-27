@@ -4,14 +4,6 @@ containerdPack=cri-containerd-cni-1.4.11-linux-amd64.tar.gz
 sandbox_pause="registry.cn-hangzhou.aliyuncs.com/google_containers/pause:3.5"
 endpoint="https://1nj0zren.mirror.aliyuncs.com"
 
-echoVariable(){
-	echo $libseccompPack
-	echo $containerdPack
-	echo $sandbox_pause
-	echo $endpoint
-	# return  echo $containerdPack|awk -F"-" '{print $4}'  #返回值，只能返回数值.可赋值
-}
-
 # ----------------------docker引擎切换为containerd
 # 1,停止 docker 和 kubelet
 stopDockerKuberlet(){
